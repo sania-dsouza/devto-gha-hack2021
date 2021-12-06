@@ -1,0 +1,47 @@
+{
+  "invocation": "nutri planner",
+  "version": "4.0",
+  "intents": {
+    "YesIntent": {
+      "phrases": [
+        "yes",
+        "yes please",
+        "ok"
+      ]
+    },
+    
+    "NoIntent": {
+      "phrases": [
+        "no",
+        "no thanks"
+      ]
+    },
+
+    "SetBreakfastIntent" : {
+      "phrases": [
+        "omelette",
+        "smoothie",
+        "cereal"
+      ]    
+    },
+
+    "SetMiddayIntent" : {
+      "phrases": [
+        "parfait",
+        "apple pie",
+        "tea cake"
+      ]    
+    },
+
+    "SetLunchIntent": {
+      "phrases" : [
+        "chicken and rice",
+        "fish and chips",
+        "ramen"
+      ]
+    },
+    "AMAZON.StopIntent" : {
+      "phrases" : []
+    }
+  }
+}

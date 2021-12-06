@@ -1,0 +1,53 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "jovo test",
+      "types": [],
+      "intents": [
+        {
+          "name": "YesIntent",
+          "samples": [
+            "yes",
+            "yes please",
+            "ok"
+          ]
+        },
+        {
+          "name": "NoIntent",
+          "samples": [
+            "no",
+            "no thanks"
+          ]
+        },
+        {
+          "name": "SetBreakfastIntent",
+          "samples": [
+            "omelette",
+            "smoothie",
+            "cereal"
+          ]
+        },
+        {
+          "name": "SetMiddayIntent",
+          "samples": [
+            "parfait",
+            "apple pie",
+            "tea cake"
+          ]
+        },
+        {
+          "name": "SetLunchIntent",
+          "samples": [
+            "chicken and rice",
+            "fish and chips",
+            "ramen"
+          ]
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        }
+      ]
+    }
+  }
+}
