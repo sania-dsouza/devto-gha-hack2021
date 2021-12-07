@@ -3,7 +3,6 @@ const { TestSuite, InputType } = require('@jovotech/framework');
 const testSuite = new TestSuite();
 
 test('should launch when prompted', async () => {
-
   const { output } = await testSuite.run({
     type: InputType.Launch, // or 'LAUNCH'
   });
@@ -18,9 +17,5 @@ test('should launch when prompted', async () => {
 
   //console.log(output);
 
-  expect(output[0]["message"]).toBeDefined();
-
+  expect(output[0]['message']).toBeDefined();
 });
-
-
-

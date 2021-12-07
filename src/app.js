@@ -14,7 +14,6 @@ import { SetDayMealComponent } from './components/SetDayMealComponent';
 |
 */
 const app = new App({
-
   /*
   |--------------------------------------------------------------------------
   | Components

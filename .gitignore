@@ -5,3 +5,5 @@ bundle.zip
 .env
 dist/
 .idea
+reports/
+.env
