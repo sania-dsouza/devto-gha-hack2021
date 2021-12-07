@@ -23,6 +23,7 @@
     "@jovotech/plugin-debugger": "^4.0.0",
     "@jovotech/server-express": "^4.0.0",
     "ask-cli": "^2.22.1",
+    "jest-html-reporter": "^3.4.2",
     "moment": "^2.29.1"
   },
   "devDependencies": {

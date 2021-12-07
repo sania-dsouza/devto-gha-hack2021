@@ -36,12 +36,6 @@ jobs:
     - run: |
         npm install
         npm run eslint
-        npm run lint-report
-    - name: Upload results
-      uses: actions/upload-artifact@v2
-      with:
-        name: eslint-report
-        path: ./reports/
 
   unit-test: 
     runs-on: ubuntu-latest
@@ -53,5 +47,16 @@ jobs:
     - run: |
         npm install
         npm run test
+    - name: Upload results
+      uses: actions/upload-artifact@v2
+      with:
+        name: unit-test-report
+        path: ~/reports
+
+  # code-coverage: 
+  #   runs-on: ubuntu-latest
+  #   name: Code Coverage using Codecov
+  #   needs: unit-test
+    
 
 
