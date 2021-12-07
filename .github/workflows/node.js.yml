@@ -52,12 +52,20 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: unit-test-report
-        path: ~/reports
+        path: ~/test-report.html
 
-  # code-coverage: 
-  #   runs-on: ubuntu-latest
-  #   name: Code Coverage using Codecov
-  #   needs: unit-test
-    
+  code-coverage: 
+    runs-on: ubuntu-latest
+    name: Code Coverage using Codecov
+    needs: unit-test
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - run: |
+        npm install
+        npm run codecov
+      env: # Or as an environment variable
+        CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+      
 
 

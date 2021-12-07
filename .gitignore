@@ -5,3 +5,4 @@ bundle.zip
 .env
 .idea
 .env
+.nyc_output

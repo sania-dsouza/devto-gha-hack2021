@@ -12,7 +12,8 @@
     "postbundle": "cd bundle && bestzip ../bundle.zip * && cd ..",
     "eslint": "eslint src test --fix",
     "lint-report": "eslint . -f node_modules/eslint-detailed-reporter/lib/detailed.js",
-    "test": "jest -c jest.config.js"
+    "test": "jest -c jest.config.js",
+    "codecov" : "nyc npm test && nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
   "author": "jovotech",
   "license": "Apache-2.0",
