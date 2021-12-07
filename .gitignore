@@ -3,6 +3,5 @@ db/
 bundle/
 bundle.zip
 .env
-dist/
 .idea
 .env
