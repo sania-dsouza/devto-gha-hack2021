@@ -11,7 +11,7 @@
     "bundle": "esbuild --bundle --outfile=bundle/index.js --sourcemap --minify --keep-names --platform=node --target=node14 --format=cjs  --external:aws-sdk --external:@oclif/* --external:@jovotech/cli*",
     "postbundle": "cd bundle && bestzip ../bundle.zip * && cd ..",
     "eslint": "eslint src test --fix",
-    "lint-report": "eslint . -f node_modules/eslint-detailed-reporter/lib/detailed.js -o reports/eslint/report.html",
+    "lint-report": "eslint . -f node_modules/eslint-detailed-reporter/lib/detailed.js",
     "test": "jest -c jest.config.js"
   },
   "author": "jovotech",
