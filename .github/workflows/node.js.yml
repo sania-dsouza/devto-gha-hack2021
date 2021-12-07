@@ -11,9 +11,7 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     strategy:
       matrix:
         node-version: [14.x]
@@ -27,4 +25,22 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm install
+
+  static-code-analysis: 
+    runs-on: ubuntu-latest
+    name: Static code analysis 
+    needs: build
+    steps: 
+    - name: Checkout
+      uses: actions/checkout@v2
+    - run: |
+        npm install;
+        npm run eslint;
+        npm run lint-report
+    - name: Upload results
+      uses: actions/upload-artifact@v2
+      with:
+        name: eslint-report
+        path: ./reports/
+
 
