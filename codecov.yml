@@ -1,5 +1,2 @@
-codecov:
-  token: 7afa5618-4ad8-4eba-b02d-7c73feb6e8d5
-
 fixes:
       - "src/::src/"
