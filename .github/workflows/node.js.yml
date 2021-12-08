@@ -64,8 +64,13 @@ jobs:
     - run: |
         npm install
         npm run codecov
-      env: # Or as an environment variable
-        CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+    - name: Codecov push results
+      uses: codecov/codecov-action@v2
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
+
+
+        
       
 
 
