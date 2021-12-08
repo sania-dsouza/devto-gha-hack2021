@@ -52,7 +52,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: unit-test-report
-        path: reports/test-report.html
+        path: reports/unit-test-report.html
 
   code-coverage: 
     runs-on: ubuntu-latest

@@ -6,3 +6,4 @@ bundle.zip
 .idea
 .env
 .nyc_output
+coverage/
