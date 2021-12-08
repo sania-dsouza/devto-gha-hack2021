@@ -58,7 +58,7 @@ var SetDayMealComponent = (_dec = (0, _framework.Component)(), _dec2 = (0, _fram
     key: "setCalIntake",
     value: function setCalIntake() {
       return this.$send(_BreakfastOutput.BreakfastOutput, {
-        message: 'Ok, today is ' + (0, _moment["default"])().format("Do MMM YYYY") + '. What did you eat for breakfast?'
+        message: 'Ok, today is ' + (0, _moment["default"])().format('Do MMM YYYY') + '. What did you eat for breakfast?'
       });
     }
   }, {
@@ -86,7 +86,7 @@ var SetDayMealComponent = (_dec = (0, _framework.Component)(), _dec2 = (0, _fram
     key: "finishDayMeal",
     value: function finishDayMeal() {
       return this.$send({
-        message: 'I have saved your day meal for ' + (0, _moment["default"])().format("Do MMM YYYY") + '.'
+        message: 'I have saved your day meal for ' + (0, _moment["default"])().format('Do MMM YYYY') + '.'
       });
     } // UNHANDLED() {
     //   return this.START();

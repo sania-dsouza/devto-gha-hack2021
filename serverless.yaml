@@ -1,0 +1,10 @@
+"service": "devto-gha-hack2021"
+"frameworkVersion": "2"
+"package":
+  "artifact": "./bundle.zip"
+"provider":
+  "name": "aws"
+  "runtime": "nodejs14.x"
+"functions":
+  "handler":
+    "handler": "index.handler"

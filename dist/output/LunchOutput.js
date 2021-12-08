@@ -39,7 +39,7 @@ var LunchOutput = (_dec = (0, _framework.Output)(), _dec(_class = /*#__PURE__*/f
     key: "build",
     value: function build() {
       return {
-        quickReplies: ["chicken and rice", "fish and chips", "ramen"],
+        quickReplies: ['chicken and rice', 'fish and chips', 'ramen'],
         listen: true
       };
     }

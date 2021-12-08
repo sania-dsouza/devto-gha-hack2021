@@ -1,5 +1,6 @@
 const { ProjectConfig } = require('@jovotech/cli-core');
 const { AlexaCli } = require('@jovotech/platform-alexa');
+const { ServerlessCli } = require('@jovotech/target-serverless');
 // ...
 
 const project = new ProjectConfig({
@@ -15,8 +16,9 @@ const project = new ProjectConfig({
       //   /* ... */
       // },
     }),
-    // ...
+    new ServerlessCli({ /* options */ }),
   ],
+  
 });
 
 
