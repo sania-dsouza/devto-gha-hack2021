@@ -161,7 +161,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/devto-gha-hack2021/dev/1638994068889-2021-12-08T20:07:48.889Z/bundle.zip"
+          "S3Key": "serverless/devto-gha-hack2021/dev/1638995104456-2021-12-08T20:25:04.456Z/bundle.zip"
         },
         "Handler": "index.handler",
         "Runtime": "nodejs14.x",
@@ -179,14 +179,14 @@
         "HandlerLogGroup"
       ]
     },
-    "HandlerLambdaVersion9AEmOTRpwmrNDKxy0Abv6Z7RDLlgtWsEGDFhregjF2U": {
+    "HandlerLambdaVersionWotztdb5ZJgv4kmPGGUznXVAzhFsFC2DMYt3bF18o": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "HandlerLambdaFunction"
         },
-        "CodeSha256": "lYoglt9PY/31MiJ3NkCnxhuL7zhaAOPvhQEj7gId4HY="
+        "CodeSha256": "pvQ9PfxU2LbRHAkm5VTyK1+hYic995Ademg2eb9fvXQ="
       }
     }
   },
@@ -202,7 +202,7 @@
     "HandlerLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "HandlerLambdaVersion9AEmOTRpwmrNDKxy0Abv6Z7RDLlgtWsEGDFhregjF2U"
+        "Ref": "HandlerLambdaVersionWotztdb5ZJgv4kmPGGUznXVAzhFsFC2DMYt3bF18o"
       },
       "Export": {
         "Name": "sls-devto-gha-hack2021-dev-HandlerLambdaFunctionQualifiedArn"
