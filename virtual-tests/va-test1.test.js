@@ -6,7 +6,7 @@ describe("Test the nutriplanner app skills", function() {
     
     beforeEach(function () {
         alexa = VirtualAlexa.Builder()
-            .handler("src/index.handler") // Lambda function file and name
+            .handler("./index.handler") // Lambda function file and name
             .interactionModelFile("./build/platform.alexa/skill-package/interactionModels/custom/en-US.json")
             .create();
     });
@@ -24,6 +24,14 @@ describe("Test the nutriplanner app skills", function() {
         }).launch().then((result) => {
             expect(result.response.outputSpeech.ssml).to.exist;
             expect(result.response.outputSpeech.ssml).to.include("nutri planner");
+            done();
+        });
+    });
+
+    it("Should utter hello and get a response", function(done) {
+        alexa.utter("yes").then((result) => {
+            expect(result.response.outputSpeech.ssml).to.exist;
+            expect(result.response.outputSpeech.ssml).to.include("Hello World");
             done();
         });
     });
