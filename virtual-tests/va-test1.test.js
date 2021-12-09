@@ -16,25 +16,25 @@ describe("Test the nutriplanner app skills", function() {
         expect(true).to.be.true;
     });
 
-    it("Should launch the skill and get a response", function(done) {
-        alexa.filter(function(request) {
-            request.context.System.device.supportedInterfaces.Display = {};
-            request.context.System.device.supportedInterfaces.VideoApp = {};
-            return request;
-        }).launch().then((result) => {
-            expect(result.response.outputSpeech.ssml).to.exist;
-            expect(result.response.outputSpeech.ssml).to.include("nutri planner");
-            done();
-        });
-    });
+    // it("Should launch the skill and get a response", function(done) {
+    //     alexa.filter(function(request) {
+    //         request.context.System.device.supportedInterfaces.Display = {};
+    //         request.context.System.device.supportedInterfaces.VideoApp = {};
+    //         return request;
+    //     }).launch().then((result) => {
+    //         expect(result.response.outputSpeech.ssml).to.exist;
+    //         expect(result.response.outputSpeech.ssml).to.include("nutri planner");
+    //         done();
+    //     });
+    // });
 
-    it("Should utter hello and get a response", function(done) {
-        alexa.utter("yes").then((result) => {
-            expect(result.response.outputSpeech.ssml).to.exist;
-            expect(result.response.outputSpeech.ssml).to.include("Hello World");
-            done();
-        });
-    });
+    // it("Should utter hello and get a response", function(done) {
+    //     alexa.utter("yes").then((result) => {
+    //         expect(result.response.outputSpeech.ssml).to.exist;
+    //         expect(result.response.outputSpeech.ssml).to.include("Hello World");
+    //         done();
+    //     });
+    // });
 
 
     

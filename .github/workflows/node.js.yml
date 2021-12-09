@@ -69,17 +69,6 @@ jobs:
       with:
           token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
 
-  # build-jovo-code-to-deploy: 
-  #   runs-on: ubuntu-latest
-  #   name: Build jovo Alexa skill for deploy 
-  #   needs: code-coverage
-  #   steps: 
-  #   - name: Checkout
-  #     uses: actions/checkout@v2
-  #   - run: |
-  #       npm install
-  #       jovo build:platform alexa
-    
   virtual-alexa-tests: 
     runs-on: ubuntu-latest
     name: Test on Virtual Alexa
@@ -96,24 +85,24 @@ jobs:
         name: virtual-test-report
         path: reports/test-report.html  
 
-    # deploy-skill: 
-    #   name: build and deploy lambda
-    #   if: always()
-    #   runs-on: ubuntu-latest
-    #   steps:
-    #     - name: Checkout
-    #       uses: actions/checkout@v2
-    #     - name: Install dependencies, Build application and Zip dist folder contents
-    #       run: |
-    #         npm install && npm run build && zip -qq -r -j ./bundle.zip ./dist/*
-    #     - name: deploy zip to aws lambda
-    #       uses: appleboy/lambda-action@master
-    #       with:
-    #         aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-    #         aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-    #         aws_region: ${{ secrets.AWS_REGION }}
-    #         function_name: 'devto-gha-hack2021-dev-handler'
-    #         zip_file: bundle.zip
+  deploy-skill: 
+    name: Build and deploy lambda
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install dependencies and zip folder contents
+        run: |
+          npm install && zip -qq -r -j ./bundle.zip
+      - name: deploy zip to aws lambda
+        uses: appleboy/lambda-action@master
+        with:
+          aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws_region: ${{ secrets.AWS_REGION }}
+          function_name: 'devto-gha-hack2021-dev-handler'
+          zip_file: bundle.zip
 
   
       
