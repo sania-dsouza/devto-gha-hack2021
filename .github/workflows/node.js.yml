@@ -87,7 +87,7 @@ jobs:
 
   deploy-skill: 
     name: Build and deploy lambda
-    if: always()
+    needs: virtual-alexa-tests
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
