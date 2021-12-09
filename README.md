@@ -20,3 +20,6 @@ The Github Actions workflow is the `.github/workflows/node.js.yml` file
 The workflow is designed to function end-to-end from build to deploy for a custom Alexa skill. 
 
 Some of the actions used include checking out code, installing dependencies, testing, finding code coverage, building, zipping and deploying code to AWS Lambda and storing artifacts. Details are in the DEV post. 
+
+## License
+MIT
