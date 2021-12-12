@@ -9,18 +9,6 @@ const debuggerConfig = new DebuggerConfig({
         type: 'LAUNCH',
       },
     },
-    {
-      label: 'Yes',
-      input: {
-        intent: 'YesIntent',
-      },
-    },
-    {
-      label: 'No',
-      input: {
-        intent: 'NoIntent',
-      },
-    },
     // ...
   ],
 });
